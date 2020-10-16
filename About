@@ -3,4 +3,6 @@ client, but the client cannot be given the software. The client only gave his/he
 
 As this was a group project not all of the code in this project is mine. I worked mostly on the CSS, JavaScript and jQuery.
 
-The goal of this website is to allow the client or user to keep track of, and manage their clients and jobs. 
+The goal of this website is to allow the client or user to keep track of, and manage their clients and jobs.
+
+Credit to: https://github.com/kamranahmedse for the jQuery toast messages
