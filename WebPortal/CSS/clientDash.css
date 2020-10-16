@@ -1,0 +1,480 @@
+.client-content{    
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    min-height: 0;
+}
+
+.client-row-header{
+    height: 35px;
+    background-color: #03AAFB;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/****************
+Blue header bar
+****************/
+
+.client-row-header > *{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.client-row-header h2{
+    color: #333333;
+    font-size: 16;
+    font-family: sans-serif, monospace;
+    font-weight: normal;
+}
+
+.dropDownSelect
+{
+    font-size: 14px;
+    padding-left: 5px;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-color: #333333;
+    border-bottom-width: 2px;
+    width: 200px;
+    color: #333333;
+    transition: 0.5s;
+}
+
+.dropDownSelect:hover
+{
+    border-bottom-color: #F3F3F3;
+}
+
+.dropDownSelect:focus
+{
+    border: 1px solid #03AAFB;
+}
+
+.dropDownSelect option
+{
+    background: #373741;
+}
+
+/****************
+Row under header
+****************/
+
+.client-row{    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+}
+
+.client-row-content{
+    width: 100%;
+    height: 100%;    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 100px;
+    align-items: center;
+    min-height: 0;
+}
+
+/******
+Panels
+******/
+
+.client-panel{
+    height: 100%;
+    width: 100%;
+    background: rgba(55, 55, 65, 0.8);
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-normal{
+    grid-column: span 1;
+}
+
+.panel-double{
+    grid-column: span 2;
+}
+
+.client-panel h3{
+    margin: 15px 0px 15px 10px;
+    font-family: sans-serif, monospace;
+    font-size: 14;
+    font-weight: normal;
+    color: #808080;
+}
+
+.panel-content{
+    min-height: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+/**************
+Details panel
+**************/
+
+#clientdash-job-details .panel-content{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#ref-no{
+    
+}
+
+.details-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.details-heading{
+    font-family: sans-serif, monospace;
+    font-size: 12;
+    font-weight: normal;
+    color: #808080;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.details-info{
+    font-family: sans-serif, monospace;
+    font-size: 12;
+    font-weight: normal;
+    color: #F3F3F3;
+}
+
+/*************
+Updates panel
+*************/
+
+#clientdash-job-updates .panel-content{
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-auto-rows: auto;
+    min-height: 0;
+}
+
+
+#clientdash-job-updates .panel-content h4{
+    margin: 0px 0px 15px 0px;
+    font-weight: normal;
+    font-family: sans-serif, monospace;
+    font-size: 12pt;
+    color: #808080;
+}
+
+.updates-heading-feedback{
+    margin-left: 15px !important;
+}
+
+.update-milestone{    
+    border-right: 2px solid #97A6B7;
+    padding: 10px 5px 10px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: normal;
+    font-family: sans-serif, monospace;
+    font-size: 10pt;
+}
+
+.milestone-completion-time{
+    color: #808080;
+}
+
+.milestone-completion-details{
+    color: #F3F3F3;
+}
+
+.milestone-name{
+    color: #03AAFB;
+}
+
+.update-feedback{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: normal;
+    font-family: sans-serif, monospace;
+    font-size: 10pt;
+    color: #F3F3F3;
+}
+
+.update-feedback-triangle{
+    border: 8px solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #97A6B7;
+}
+
+/*************
+Chat panel
+*************/
+
+#clientdash-job-chat .panel-content{
+    margin: 0px 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.chat-messages{
+    overflow: auto;
+}
+
+.chat-message{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 20px 10px 20px;
+}
+
+.chat-message .message-content{
+    font-size: 12pt;
+    min-width: 0;
+    max-width: 80%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;     
+}
+
+.message-to{
+    align-items: flex-end;
+}
+
+.message-to .message-content{
+    background-color: #03AAFB;
+}
+
+.message-from{
+    align-items: flex-start;
+}
+
+.message-from .message-content{
+    background-color: #556579;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat-message .message-content .message{
+    color: #F3F3F3;
+}
+
+.chat-message .message-content .message-content-sender{
+    color: #03AAFB;
+}
+
+.chat-message .message-time{
+    font-size: 10pt;
+    color: #808080;
+}
+
+.chat-send-message{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+}
+
+#message-icon{
+    height: 36px;
+    width: 36px;
+    margin-right: 5px;
+    z-index: 100;
+}
+
+#message-text{
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    background-color: transparent;
+    border: 3px solid;
+    border-color: transparent transparent #808080 transparent;
+    width: 100%;
+    color: #F3F3F3;
+}
+
+#message-text:hover{
+    border-bottom-color: #03AAFB;
+}
+
+#message-send{
+    margin-right: 10px;
+    background-color: #03AAFB;
+    border: 0px;
+    color: #F3F3F3;
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    width: 75px;
+    height: 35px;
+}
+
+/*****************
+Job history panel
+*****************/
+
+.history-job-table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.history-job-table, .history-job-header, .history-job-row, .history-job-cell{
+   border: none; 
+}
+
+.history-job-header{
+    height: 35px;    
+}
+
+.history-job-header th{
+    position: sticky;
+    top: 0;
+    background-color: #03AAFB;    
+    color: #333333;
+    font-weight: normal;
+}
+
+.history-job-cell{
+    padding: 5px 10px 5px 10px;
+    max-width: 300px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.history-job-header .history-job-cell{
+    vertical-align: middle;
+}
+
+.fa-star{
+    font-size: 10pt;
+}
+
+.rating-checked{
+    color: #03AAFB;
+}
+
+.rating-unchecked{
+    color: #808080;
+}
+
+/**************
+Queries panel
+**************/
+
+#clientdash-history-queries .panel-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 0px 5px 5px 10px;
+    font-family: sans-serif, monospace;
+}
+
+.queries-query-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+.query{
+    margin-right: 5px;
+    background-color: #556579;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.query-date-category{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.query-date{
+    color: #F3F3F3;
+    font-size: 12pt;
+}
+
+.query-category{
+    color: #03AAFB;
+    font-size: 12pt;
+}
+
+.query-description{
+    color: #F3F3F3;
+    font-size: 10pt;
+    /*max-height: 50px;*/
+    overflow: hidden;
+}
+
+.toggle-show{
+    display: inline;
+    color: #03AAFB;
+    font-size: 10pt;
+    align-self: flex-end;
+    position: relative;
+    top: -10px;
+    display: none;
+    margin-bottom: -10px;
+}
+
+.query-status-response{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.query-status-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.query-response-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.query-prompt{
+    color: #F3F3F3;
+    font-size: 12pt;
+}
+
+.query-data{
+    color: #03AAFB;
+    font-size: 12pt;
+}
+
+.new-query-button{
+    background-color: #03AAFB;
+    border: 0px;
+    color: #F3F3F3;
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    height: 35px;
+}

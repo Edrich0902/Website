@@ -1,0 +1,256 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20 Aug 2020, 3:39:44 PM
+    Author     : Tristan Ackermann
+*/
+
+.jobList{
+    width:98%;
+}
+
+#job-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#jobDetails{
+    width:96%;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.itemRemoveImg{
+    width: 13px;
+    height: 13px;
+    border-radius: 6px;
+}
+
+#addTask{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+#addTaskImg{
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+    margin-left: 4px;
+    z-index: 100;
+}
+
+.addTaskInput{
+    margin-top: 0px;
+}
+
+#addTaskInput{
+    width:80%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+th{
+    text-align: left;
+}
+
+#jobList{
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+#jobList tr {
+    background: rgba(55, 55, 65, 0.8);
+    height: 26px;
+}
+
+#jobList td {
+    border: none;
+}
+
+#jobList tr:hover {
+    background: rgba(75, 75, 85, 0.8);
+}
+#jobList th {
+    background-color:#03AAFB;
+}
+
+#jobList td:hover {
+    cursor: pointer;
+}
+
+.grid-container{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    grid-gap: 15px 14px;
+}
+
+#tasks{
+    grid-column:1;
+    grid-row:1;
+}
+
+#milestones{
+    grid-column:2;
+    grid-row:1;
+}
+
+#chat{
+    grid-column:3;
+    grid-row:1;
+}
+.modal-content{
+    background: rgba(55, 55, 65, 0.99);
+    color: white;
+    width: 500px;
+}
+#hardwareClose, #softwareClose{
+    color: white;
+}
+
+.btn{
+  background-color: #03AAFB;
+  font-size: 16px;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.addInput {
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    background-color: transparent;
+    border: 3px solid;
+    border-color: transparent transparent #808080 transparent;
+    width: 100%;
+    color: #F3F3F3;
+    height: 20px;
+    border-top-width: 0px;
+    margin-right: 4px;
+}
+
+.addInputBtn{
+    margin-right: 10px;
+    background-color: #03AAFB;
+    border: 0px;
+    color: #F3F3F3;
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    width: 75px;
+    height: 26px;
+
+}
+
+.addRegBtn {
+    margin-right: 10px;
+    background-color: #03AAFB;
+    border: 0px;
+    color: #F3F3F3;
+    font-family: sans-serif, monospace;
+    font-size: 14pt;
+    width: 182px;
+    height: 26px;
+}
+
+.regTable{
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    font-size: 15px !important;
+    margin-bottom: 40px;
+}
+
+.regTable th {
+    background-color:#03AAFB;
+    height: 36px;
+}
+
+#addSoftwareReg,#addHardwareReg{
+    position:absolute;
+    bottom:0px;
+}
+
+#clientdash-job-details{
+    position:relative; 
+}
+
+#description{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description{
+    margin-top: 10px;
+}
+
+.green{
+    background: green;
+}
+
+.yelow{
+    background: yellow;
+}
+
+.orange{
+    background: orange;
+}
+
+.red{
+    background: red;
+}

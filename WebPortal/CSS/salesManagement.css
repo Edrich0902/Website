@@ -1,0 +1,292 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01 Sep 2020, 2:38:48 PM
+    Author     : Barnard
+*/
+#existingClientsTitle
+{
+    font-family: sans-serif, monospace;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/*Wrapper used to better control the position and width of the actual div with content*/
+.wrapper
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#existingClientsContainer
+{
+    /*rgba used instead of hex because hex caues 
+    content in div to also be transparent*/
+    background: rgba(55, 55, 65, 0.8);
+    width: 100%;
+    max-height: 300px;
+    margin-top: 5px;
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.titleBar
+{
+    background: #03AAFB;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: 30px;
+}
+
+.titleBar :first-child
+{
+    margin-left: 10px;
+}
+
+.titleBar :last-child
+{
+    margin-right: 10px;
+    text-align: right;
+}
+
+.client
+{
+    border-bottom: 1px solid #808080;
+    height: auto;
+    min-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+.client :first-child
+{
+    margin-left: 10px;
+}
+
+.client :last-child
+{
+    margin-right: 10px;
+    text-align: right;
+    color: #03AAFB;
+    cursor: pointer;
+}
+
+#existingClientsContainer :last-child
+{
+    border-bottom: none;
+}
+
+.wrap
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+}
+
+#potential_clients
+{
+    margin-top: 5px;
+    margin-right: 20px;
+    background: rgba(55, 55, 65, 0.8);
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#potentialClientsTitleBar
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+    min-height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: #03AAFB;
+}
+
+#potentialClientsTitleBar :first-child
+{
+    margin-left: 10px;
+}
+
+#potentialClientsTitleBar :last-child
+{
+    margin-right: 10px;
+}
+
+#potentialClient
+{
+    min-height: 30px;
+    border-bottom: 1px solid #808080;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+#potentialClient :first-child
+{
+    margin-left: 10px;
+}
+
+#potentialClient :last-child
+{
+    margin-right: 10px;
+}
+
+#potential_clients :last-child
+{
+    border-bottom: none;
+}
+
+#feedback
+{
+    margin-top: 5px;
+    background: rgba(55, 55, 65, 0.8);
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#feedbackTitleBar
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    min-height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: #03AAFB;
+}
+
+#feedbackTitleBar :first-child
+{
+    margin-left: 10px;
+}
+
+#feedbackTitleBar :last-child
+{
+    margin-right: 10px;
+    text-align: right;
+}
+
+#clientFeedback
+{
+    min-height: 30px;
+    border-bottom: 1px solid #808080;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+#clientFeedback :first-child
+{
+    margin-left: 10px;
+}
+
+#clientFeedback :last-child
+{
+    margin-right: 10px;
+    text-align: right;
+}
+
+#feedback :last-child
+{
+    border-bottom: none;
+}
+
+#salesStatTitle
+{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#otherInfoWrap
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:20px;
+    align-items: center;
+}
+
+#salesStatContainer
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+}
+
+.data
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data span
+{
+    text-align: center;
+}
+
+.data div
+{
+    background: #03AAFB;
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold
+}
+
+#reportDiv
+{
+    text-align: center;
+}
+
+#reportGenButton
+{
+    border: none;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    background: #03AAFB;
+    font-family: sans-serif, monospace;
+    color: #F3F3F3;
+    height: 35px;
+    width: 250px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#reportGenButton:hover
+{
+    background: #373741;
+    border: 1px solid #03AAFB;
+}

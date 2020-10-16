@@ -1,0 +1,433 @@
+/*
+    HEX CODES
+    Main, dark background - #283039
+    Card, darkish background - #394451
+    Light blue trim and text - #6BCDFD
+    Text field medium, blueish grey background - #556579
+    Text field light grey text - #B4B4B4
+    Orange - #FECB6E
+*/
+
+/*setting the default margin padding height and 
+width of the entire html/php document*/
+html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+/*Stylinng and setting the default colour and font of the body*/
+body
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image: url("webportal_desktop_background.jpg");
+    /*The line below makes the content scroll and not the background as well*/
+    background-attachment: fixed;
+    color: #F3F3F3;
+    font-family: sans-serif, monospace;
+}
+/*Styling of the header*/
+.header
+{
+    top: 0;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+/*Styling of the main page containing all the other child divs*/
+.loginPage
+{
+    min-height: 100vh;
+}
+
+#loginPageMain
+{
+    display: "";
+}
+/*Footer styling*/
+.footer
+{
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+
+/*Login content box styling*/
+.content
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-areas: "logo"
+                         "loginOptions"
+                         "loginInp"
+                         "loginSubmit";
+    margin: auto;
+    background: rgba(55, 55, 65, 0.8);
+    height: 300px;
+    width: 565px;
+}
+
+.logo
+{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+
+/*All the styling of the login options div or grid area of the login page. 
+This is both the login and register buttons*/
+.loginOptions
+{
+    grid-area: loginOptions;
+    display: flex;
+    justify-content: center;
+}
+
+.loginOptBtn
+{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: #03AAFB;
+    color: #F3F3F3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 20px;
+    transition: 0.25s ease-out;
+}
+
+.loginOptBtn:hover
+{
+    border: none;
+    background: #282837;
+    border: solid 1px #03AAFB;
+}
+
+.loginOptBtn:active
+{
+    background: #03AAFB;
+    border: none;
+}
+
+.registerOptBtn
+{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: #282837;
+    border: solid 1px #03AAFB;
+    color: #F3F3F3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 20px;
+    transition: 0.25s ease-out;
+}
+
+.registerOptBtn:hover
+{
+    border: none;
+    background: #03AAFB;
+}
+
+.registerOptBtn:active
+{
+    background: #373741;
+}
+/*End of login options styling*/
+
+/*Login input styling. This includes styling for the login input 
+div and all the text input fields as well as forgot password*/
+.loginInp
+{
+    grid-area: loginInp;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "account username ."
+                         "lock passw fgPw";
+    align-items: center;
+}
+
+#username
+{
+    grid-area: username;
+    align-items: center;
+}
+
+#passw
+{
+    grid-area: passw;
+    align-items: center;
+}
+
+.forgotPw
+{
+    grid-area: fgPw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountImg
+{
+    grid-area: account;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 120px;
+}
+
+.lockImg
+{
+    grid-area: lock;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 120px;
+}
+
+.input
+{
+    width: 250px;
+    height: 30px;
+    margin: auto;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #808080;
+    color: white;
+    transition: 0.5s;
+}
+
+.input:hover
+{
+    border-bottom-color: #03AAFB;
+}
+
+.input:focus
+{
+    border: 1px solid #03AAFB;
+}
+/*End of login input styling*/
+
+/*Styling for the login submit div as
+well as the login submit button*/
+.loginSubmit
+{
+    grid-area: loginSubmit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginSubBtn
+{
+    width: 250px;
+    height: 30px;
+    border: none;
+    background: #03AAFB;
+    color: #F3F3F3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 10px;
+    transition: 0.25s ease-out;
+}
+
+.loginSubBtn:hover
+{
+    background: #373741;
+    border: solid #03AAFB 1px;
+}
+
+.loginSubBtn:active
+{
+    background: #03AAFB;
+}
+/*End of login submit styling*/
+
+/*Styling and placement of the compulink logo
+makes use of an id to override other styling done 
+to the login box*/
+#compuLogo
+{
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+}
+
+.forgotPw a
+{
+    text-decoration: none;
+    color: #F3F3F3;
+    transition: 0.5s;
+}
+
+.forgotPw a:hover
+{
+    color: #03AAFB;
+    text-decoration: underline;
+}
+
+#forgotPassSmallScreen
+{
+    display: none;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .header
+    {
+        font-size: 25px;
+    }
+    
+    .footer
+    {
+        font-size: 25px;
+    }
+    
+    .content
+    {
+        width: 450px;
+        height: 330px;
+    }
+    
+    .loginSubmit
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    #forgotPassSmallScreen
+    {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    #forgotPassBigScreen
+    {
+        display: none;
+    }
+    
+    .accountImg, .lockImg
+    {
+        margin-left: 80px;
+    }
+    
+    .loginSubBtn
+    {
+        margin-top: 20px;
+    }
+}
+
+/*
+****************
+Tooltips styling
+****************
+*/
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text{    
+    /*Styling the tooltip*/
+    visibility: hidden;
+    width: 200px;
+    background-color: #282837;
+    color: #F3F3F3;
+    box-shadow: 0px 0px 10px #03AAFB;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    
+    /*Positioning the tooltip*/
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    z-index: 1;
+    
+    /*Tooltip fade in*/
+    font-size: 0px;
+    height: 0px;
+    opacity: 0;
+    transition: opacity 0.3s linear 0.3s, height 0.3s linear 0.3s, font-size 0.3s linear 0.3s;
+}
+
+/*bottom arrow*/
+.tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    margin-right: -15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #282837 transparent transparent transparent;    
+}
+
+/*After hovering over the field*/
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+    opacity: 0.8;
+    height: 20px;
+    font-size: 14px;
+}
+
+/*
+****************
+End of tooltips styling
+****************
+*/
+
+/*
+****************
+CUSTOM SCROLLBAR
+****************
+*/
+::-webkit-scrollbar
+{
+    width: 7px;    
+}
+
+::-webkit-scrollbar-track
+{
+    background: #373741;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #03AAFB;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #0082D3;
+    border-radius: 25px;
+}
+/*
+********************
+CUSTOM SCROLLBAR END
+********************
+*/
